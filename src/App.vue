@@ -1,12 +1,22 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import UtteranceBase from "./components/UtteranceBase.vue";
+import { reactive } from "vue";
+import MessageBase from "./components/MessageBase.vue";
+
+const message = reactive({
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non!",
+  labels: [
+    {
+      id: "bca6c3ab-bb3e-4921-a10a-002c0b0c868e",
+      name: "New label",
+      start: 0,
+      end: 5,
+    },
+  ],
+});
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <UtteranceBase msg="Hello Vue 3 + TypeScript + Vite" />
+  <MessageBase :value="message" />
 </template>
 
 <style>
