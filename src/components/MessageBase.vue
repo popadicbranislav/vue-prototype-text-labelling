@@ -173,6 +173,7 @@ const textContent = reactive(
   color: white;
 
   cursor: pointer;
+  user-select: none;
 }
 
 .entity-class:hover {
@@ -181,6 +182,8 @@ const textContent = reactive(
 
 .entity-class__label {
   position: absolute;
+  top: 100%;
+  left: 0;
 
   background: var(--entity-color);
   width: 100%;
@@ -195,5 +198,7 @@ const textContent = reactive(
 
   overflow: hidden;
   text-overflow: ellipsis;
+
+  user-select: none;
 }
 </style>
